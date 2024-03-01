@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QualificationController;
+use App\Http\Controllers\EquationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,6 @@ Route::get('/', function () {
 
 Route::get('/prom',[QualificationController::class,'create']); 
 Route::post('/prom',[QualificationController::class,'store'])->name('for.store');
+
+Route::get('/ec',[EquationController::class,'create']); 
+Route::post('/ec',[EquationController::class,'store'])->name('for.store');
